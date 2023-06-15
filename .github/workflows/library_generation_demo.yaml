@@ -1,10 +1,5 @@
 on:
-  push:
-    branches:
-    - main
-  pull_request:
-    paths:
-    - 'generation/**'
+  workflow_dispatch:
 name: library generation demo job for java-bigtable
 jobs:
   library-generation:
