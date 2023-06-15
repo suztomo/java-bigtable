@@ -9,7 +9,7 @@ repo_path=$(realpath "${basedir}/..")
 # Avoid checking out the target directory within the java-bigtable
 # repository clone because the postprocessor's formatting tries to
 # format everything under the repository.
-cd ../..
+cd "${repo_path}/.."
 mkdir -p target
 rm -rf target/sdk-platform-java
 
