@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    paths:
+    - 'generation/**'
+name: library generation demo job for java-bigtable
+jobs:
+  library-generation:
+    name: Library generation job
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+    - name: Run library regeneration of this repo
+      run: |
+        sh generation/generate_self.sh
+        echo "Finished generation"
+
